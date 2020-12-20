@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 9d593e207beea41499d4c05d6ef958b0
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Box1506
+  - first:
+      1: 100004
+    second: Box1507
+  - first:
+      1: 100006
+    second: Box1508
+  - first:
+      1: 100008
+    second: Box1509
+  - first:
+      1: 100010
+    second: Box1510
+  - first:
+      1: 100012
+    second: Box1511
+  - first:
+      1: 100014
+    second: Box1512
+  - first:
+      1: 100016
+    second: Cylinder325
+  - first:
+      1: 100018
+    second: Cylinder326
+  - first:
+      1: 100020
+    second: Cylinder327
+  - first:
+      1: 100022
+    second: Cylinder328
+  - first:
+      1: 100024
+    second: Cylinder329
+  - first:
+      1: 100026
+    second: Cylinder330
+  - first:
+      1: 100028
+    second: Cylinder331
+  - first:
+      1: 100030
+    second: glass001
+  - first:
+      1: 100032
+    second: Object347
+  - first:
+      1: 100034
+    second: Object348
+  - first:
+      1: 100036
+    second: Object349
+  - first:
+      1: 100038
+    second: Object350
+  - first:
+      1: 100040
+    second: Object351
+  - first:
+      1: 100042
+    second: Object352
+  - first:
+      1: 100044
+    second: wheels
+  - first:
+      1: 100046
+    second: wings001
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Box1506
+  - first:
+      4: 400004
+    second: Box1507
+  - first:
+      4: 400006
+    second: Box1508
+  - first:
+      4: 400008
+    second: Box1509
+  - first:
+      4: 400010
+    second: Box1510
+  - first:
+      4: 400012
+    second: Box1511
+  - first:
+      4: 400014
+    second: Box1512
+  - first:
+      4: 400016
+    second: Cylinder325
+  - first:
+      4: 400018
+    second: Cylinder326
+  - first:
+      4: 400020
+    second: Cylinder327
+  - first:
+      4: 400022
+    second: Cylinder328
+  - first:
+      4: 400024
+    second: Cylinder329
+  - first:
+      4: 400026
+    second: Cylinder330
+  - first:
+      4: 400028
+    second: Cylinder331
+  - first:
+      4: 400030
+    second: glass001
+  - first:
+      4: 400032
+    second: Object347
+  - first:
+      4: 400034
+    second: Object348
+  - first:
+      4: 400036
+    second: Object349
+  - first:
+      4: 400038
+    second: Object350
+  - first:
+      4: 400040
+    second: Object351
+  - first:
+      4: 400042
+    second: Object352
+  - first:
+      4: 400044
+    second: wheels
+  - first:
+      4: 400046
+    second: wings001
+  - first:
+      23: 2300000
+    second: Box1506
+  - first:
+      23: 2300002
+    second: Box1507
+  - first:
+      23: 2300004
+    second: Box1508
+  - first:
+      23: 2300006
+    second: Box1509
+  - first:
+      23: 2300008
+    second: Box1510
+  - first:
+      23: 2300010
+    second: Box1511
+  - first:
+      23: 2300012
+    second: Box1512
+  - first:
+      23: 2300014
+    second: Cylinder325
+  - first:
+      23: 2300016
+    second: Cylinder326
+  - first:
+      23: 2300018
+    second: Cylinder327
+  - first:
+      23: 2300020
+    second: Cylinder328
+  - first:
+      23: 2300022
+    second: Cylinder329
+  - first:
+      23: 2300024
+    second: Cylinder330
+  - first:
+      23: 2300026
+    second: Cylinder331
+  - first:
+      23: 2300028
+    second: glass001
+  - first:
+      23: 2300030
+    second: Object347
+  - first:
+      23: 2300032
+    second: Object348
+  - first:
+      23: 2300034
+    second: Object349
+  - first:
+      23: 2300036
+    second: Object350
+  - first:
+      23: 2300038
+    second: Object351
+  - first:
+      23: 2300040
+    second: Object352
+  - first:
+      23: 2300042
+    second: wings001
+  - first:
+      33: 3300000
+    second: Box1506
+  - first:
+      33: 3300002
+    second: Box1507
+  - first:
+      33: 3300004
+    second: Box1508
+  - first:
+      33: 3300006
+    second: Box1509
+  - first:
+      33: 3300008
+    second: Box1510
+  - first:
+      33: 3300010
+    second: Box1511
+  - first:
+      33: 3300012
+    second: Box1512
+  - first:
+      33: 3300014
+    second: Cylinder325
+  - first:
+      33: 3300016
+    second: Cylinder326
+  - first:
+      33: 3300018
+    second: Cylinder327
+  - first:
+      33: 3300020
+    second: Cylinder328
+  - first:
+      33: 3300022
+    second: Cylinder329
+  - first:
+      33: 3300024
+    second: Cylinder330
+  - first:
+      33: 3300026
+    second: Cylinder331
+  - first:
+      33: 3300028
+    second: glass001
+  - first:
+      33: 3300030
+    second: Object347
+  - first:
+      33: 3300032
+    second: Object348
+  - first:
+      33: 3300034
+    second: Object349
+  - first:
+      33: 3300036
+    second: Object350
+  - first:
+      33: 3300038
+    second: Object351
+  - first:
+      33: 3300040
+    second: Object352
+  - first:
+      33: 3300042
+    second: wings001
+  - first:
+      43: 4300000
+    second: Box1506
+  - first:
+      43: 4300002
+    second: Cylinder325
+  - first:
+      43: 4300004
+    second: Cylinder326
+  - first:
+      43: 4300006
+    second: Cylinder327
+  - first:
+      43: 4300008
+    second: Cylinder328
+  - first:
+      43: 4300010
+    second: wings001
+  - first:
+      43: 4300012
+    second: Object351
+  - first:
+      43: 4300014
+    second: Object348
+  - first:
+      43: 4300016
+    second: Object352
+  - first:
+      43: 4300018
+    second: Object349
+  - first:
+      43: 4300020
+    second: Object350
+  - first:
+      43: 4300022
+    second: Object347
+  - first:
+      43: 4300024
+    second: glass001
+  - first:
+      43: 4300026
+    second: Box1512
+  - first:
+      43: 4300028
+    second: Box1507
+  - first:
+      43: 4300030
+    second: Cylinder329
+  - first:
+      43: 4300032
+    second: Box1508
+  - first:
+      43: 4300034
+    second: Box1510
+  - first:
+      43: 4300036
+    second: Box1509
+  - first:
+      43: 4300038
+    second: Cylinder330
+  - first:
+      43: 4300040
+    second: Cylinder331
+  - first:
+      43: 4300042
+    second: Box1511
+  - first:
+      74: 7400000
+    second: wheels_rotate
+  - first:
+      74: 7400002
+    second: Wheels_hide
+  - first:
+      74: 7400004
+    second: Wheels_prepare to land
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: insides_3
+    second: {fileID: 2100000, guid: 339a443f57f754ccd8cf74a684212eaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: walls_3
+    second: {fileID: 2100000, guid: a5ae636e693e1453e9d1b02b66ab9180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: walls_4
+    second: {fileID: 2100000, guid: cffdcd6cd491047f3aac6171e74c665a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: windows_2
+    second: {fileID: 2100000, guid: 6b4f22ea790e641b0ae17eee1d5ee288, type: 2}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: wheels_rotate
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box1506
+        weight: 1
+      - path: Box1506/Cylinder325
+        weight: 1
+      - path: Box1506/Cylinder326
+        weight: 1
+      - path: Box1506/Cylinder327
+        weight: 1
+      - path: Box1506/Cylinder328
+        weight: 1
+      - path: Box1512
+        weight: 1
+      - path: glass001
+        weight: 1
+      - path: Object347
+        weight: 1
+      - path: Object348
+        weight: 1
+      - path: Object349
+        weight: 1
+      - path: Object350
+        weight: 1
+      - path: Object351
+        weight: 1
+      - path: Object352
+        weight: 1
+      - path: wheels
+        weight: 1
+      - path: wheels/Box1507
+        weight: 1
+      - path: wheels/Box1508
+        weight: 1
+      - path: wheels/Box1509
+        weight: 1
+      - path: wheels/Box1510
+        weight: 1
+      - path: wheels/Box1511
+        weight: 1
+      - path: wheels/Cylinder329
+        weight: 1
+      - path: wheels/Cylinder330
+        weight: 1
+      - path: wheels/Cylinder331
+        weight: 1
+      - path: wings001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wheels_hide
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 30
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box1506
+        weight: 1
+      - path: Box1506/Cylinder325
+        weight: 1
+      - path: Box1506/Cylinder326
+        weight: 1
+      - path: Box1506/Cylinder327
+        weight: 1
+      - path: Box1506/Cylinder328
+        weight: 1
+      - path: Box1512
+        weight: 1
+      - path: glass001
+        weight: 1
+      - path: Object347
+        weight: 1
+      - path: Object348
+        weight: 1
+      - path: Object349
+        weight: 1
+      - path: Object350
+        weight: 1
+      - path: Object351
+        weight: 1
+      - path: Object352
+        weight: 1
+      - path: wheels
+        weight: 1
+      - path: wheels/Box1507
+        weight: 1
+      - path: wheels/Box1508
+        weight: 1
+      - path: wheels/Box1509
+        weight: 1
+      - path: wheels/Box1510
+        weight: 1
+      - path: wheels/Box1511
+        weight: 1
+      - path: wheels/Cylinder329
+        weight: 1
+      - path: wheels/Cylinder330
+        weight: 1
+      - path: wheels/Cylinder331
+        weight: 1
+      - path: wings001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wheels_prepare to land
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 45
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Box1506
+        weight: 1
+      - path: Box1506/Cylinder325
+        weight: 1
+      - path: Box1506/Cylinder326
+        weight: 1
+      - path: Box1506/Cylinder327
+        weight: 1
+      - path: Box1506/Cylinder328
+        weight: 1
+      - path: Box1512
+        weight: 1
+      - path: glass001
+        weight: 1
+      - path: Object347
+        weight: 1
+      - path: Object348
+        weight: 1
+      - path: Object349
+        weight: 1
+      - path: Object350
+        weight: 1
+      - path: Object351
+        weight: 1
+      - path: Object352
+        weight: 1
+      - path: wheels
+        weight: 1
+      - path: wheels/Box1507
+        weight: 1
+      - path: wheels/Box1508
+        weight: 1
+      - path: wheels/Box1509
+        weight: 1
+      - path: wheels/Box1510
+        weight: 1
+      - path: wheels/Box1511
+        weight: 1
+      - path: wheels/Cylinder329
+        weight: 1
+      - path: wheels/Cylinder330
+        weight: 1
+      - path: wheels/Cylinder331
+        weight: 1
+      - path: wings001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 3
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
