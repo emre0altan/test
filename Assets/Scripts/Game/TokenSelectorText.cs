@@ -17,5 +17,11 @@ namespace Monopoly.Game
         {
             selectorText.text = playername + " selects token";
         }
+
+        [PunRPC]
+        public void CurrentTurn(string playername)
+        {
+            selectorText.text = "Turn: " + playername;
+        }
     }
 }

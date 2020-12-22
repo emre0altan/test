@@ -14,6 +14,7 @@ namespace Monopoly.Login
         public GameObject boardPanel, editButton, swapButton;
         public InputField editCityName, editCityPrice;
         public CityUI firstSelected, secondSelected;
+        public Slider initMoneySlider, mortgageRatioSlider;
 
         public float lastPinchDelta = 0, initSize = 0, currentSize = 0;
 
@@ -21,7 +22,7 @@ namespace Monopoly.Login
 
         private void Awake()
         {
-            if(Instance != null)
+            if (Instance != null)
             {
                 Destroy(this);
                 return;
@@ -34,12 +35,14 @@ namespace Monopoly.Login
             cityPoses = new Vector3[board.rectTransform.childCount];
             cityRots = new Vector3[board.rectTransform.childCount];
             Transform tmpTraa;
-            for(int i = 0; i < cityPoses.Length; i++)
+            for (int i = 0; i < cityPoses.Length; i++)
             {
                 tmpTraa = board.rectTransform.GetChild(i);
                 cityPoses[i] = tmpTraa.position;
                 cityRots[i] = tmpTraa.eulerAngles;
             }
+            PlayerPrefs.SetInt("InitMoney", 5000);
+            PlayerPrefs.SetInt("MortgageRatio", 20);
         }
 
 
@@ -54,7 +57,7 @@ namespace Monopoly.Login
 
         public void ChangeBoardSize(float d)
         {
-            float newwScale = board.rectTransform.localScale.x + d*0.1f;
+            float newwScale = board.rectTransform.localScale.x + d * 0.1f;
             if (newwScale < 0.1f) return;
             else if (newwScale > 3f) return;
             board.rectTransform.localScale = new Vector3(newwScale, newwScale, newwScale);
@@ -66,7 +69,7 @@ namespace Monopoly.Login
         public void ChangeBoardPos(Vector2 del)
         {
             Vector2 lastPos = board.rectTransform.anchoredPosition + del;
-            if(currentSize < initSize)
+            if (currentSize < initSize)
             {
                 lastPos.x = Mathf.Clamp(lastPos.x, -(initSize - currentSize) * 0.5f, (initSize - currentSize) * 0.5f);
                 lastPos.y = Mathf.Clamp(lastPos.y, -(initSize - currentSize) * 0.5f, (initSize - currentSize) * 0.5f);
@@ -127,12 +130,12 @@ namespace Monopoly.Login
 
         public void UpdateCityButtons()
         {
-            if(firstSelected == null && secondSelected == null)
+            if (firstSelected == null && secondSelected == null)
             {
                 editButton.SetActive(false);
                 swapButton.SetActive(false);
             }
-            else if(firstSelected != null && secondSelected != null)
+            else if (firstSelected != null && secondSelected != null)
             {
                 editButton.SetActive(false);
                 swapButton.SetActive(true);
@@ -166,5 +169,16 @@ namespace Monopoly.Login
         }
 
         #endregion
+
+        public void UpdateInitMoney()
+        {
+            PlayerPrefs.SetInt("InitMoney", Mathf.FloorToInt(initMoneySlider.value * 10000));
+        }
+
+        public void UpdateMortgage()
+        {
+            PlayerPrefs.SetInt("MortgageRatio", Mathf.FloorToInt(mortgageRatioSlider.value * 100));
+        }
     }
 }
+

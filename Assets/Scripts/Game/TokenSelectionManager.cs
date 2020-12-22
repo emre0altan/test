@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
+using Monopoly.GameBoard;
 
 namespace Monopoly.Game
 {
@@ -57,9 +58,8 @@ namespace Monopoly.Game
                     playerTurns.Add(randlist[qq], PhotonNetwork.PlayerList[i].NickName);
                     randlist.RemoveAt(qq);
                     playOrder[i].RPC("ShowOrder", RpcTarget.All, i, playerTurns[i]);
-                    Debug.Log(i + " - " + PhotonNetwork.PlayerList[i].NickName);
                 }
-                
+                GameManager.Instance.playerTurns = playerTurns;
                 NextTurn();
             }
         }
@@ -105,6 +105,7 @@ namespace Monopoly.Game
         {
             yield return new WaitForSeconds(3);
             photonView.RPC("StartToGame", RpcTarget.All);
+            GameManager.Instance.FirstStart();
         }
 
         [PunRPC]
