@@ -114,6 +114,7 @@ namespace Monopoly.Game
             tokenSelectCanvas.SetActive(false);
             gameCanvas.SetActive(true);
             PhotonNetwork.Instantiate(tokenPrefabs[playerTokens[PhotonNetwork.LocalPlayer.NickName]].gameObject.name, boardStartPos.position, boardStartPos.rotation);
+            TouchManager.Instance.onTouchBegan += GameManager.Instance.SendRaycast;
         }
 
         [PunRPC]

@@ -444,5 +444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: City
       objectReference: {fileID: 0}
+    - target: {fileID: 7865182628576515309, guid: 7429715e940ed4e52bf5de46e79245ed,
+        type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7429715e940ed4e52bf5de46e79245ed, type: 3}

@@ -16,6 +16,7 @@ namespace Monopoly.Login
         {
             userName.text = photonView.Owner.NickName;
             transform.SetParent(GameObject.Find("Users").transform);
+            transform.localScale = Vector3.one * transform.parent.localScale.x;
         }
 
         public void CheckForReady()

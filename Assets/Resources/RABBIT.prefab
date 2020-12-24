@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 7660448460650214264}
+  isInJail: 0
+  remainJailTurns: 0
 --- !u!114 &7660448460650214264
 MonoBehaviour:
   m_ObjectHideFlags: 0

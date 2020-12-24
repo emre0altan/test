@@ -11,6 +11,7 @@ namespace Monopoly.GameBoard
         public string cityName, owner;
         public int price, rent, currentHouseCount, priceOfHouse, location;
         public bool isMortgaged, isContract;
+        public GameObject[] houses;
 
         public TextMeshPro cityNameTMP, cityPriceTMP; 
         public PhotonView photonView;
@@ -19,18 +20,38 @@ namespace Monopoly.GameBoard
         public void UpdatePreSettings(string newname, int newprice, int newlocation)
         {
             photonView.RPC("GameCityRPC", RpcTarget.All, newname, newprice, newlocation);
+        }
+
+        [PunRPC]
+        public void GameCityRPC(string newname, int newprice, int newlocation)
+        {
+            cityNameTMP.text = newname;
+            cityPriceTMP.text = "$" + newprice.ToString();
+            transform.localPosition = BoardManager.Instance.GetLocInfo(1, 0, newlocation);
+            transform.localEulerAngles = BoardManager.Instance.GetLocInfo(1, 1, newlocation);
             cityName = newname;
             price = newprice;
             location = newlocation;
         }
 
         [PunRPC]
-        public void GameCityRPC(string name, int price, int location)
+        public void UpdateOwner(string playerName)
         {
-            cityNameTMP.text = name;
-            cityPriceTMP.text = "$" + price.ToString();
-            transform.localPosition = BoardManager.Instance.GetLocInfo(1, 0, location);
-            transform.localEulerAngles = BoardManager.Instance.GetLocInfo(1, 1, location);
+            owner = playerName;
+        }
+
+        [PunRPC]
+        public void UpdateHouses()
+        {
+            if (currentHouseCount < houses.Length)
+            {
+                currentHouseCount++;
+                for (int i = 0; i < houses.Length; i++)
+                {
+                    if (i < currentHouseCount) houses[i].SetActive(true);
+                    else houses[i].SetActive(false);
+                }
+            }
         }
     }
 }

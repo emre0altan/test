@@ -80,15 +80,24 @@ namespace Monopoly.GameBoard
 
         public Vector3 GetLocInfo(int type, int locType, int index)
         {
+            int newIndex = 0;
+            for(int i = 0; i < settingsCityUIs.Length; i++)
+            {
+                if(settingsCityUIs[i].cityLocation == index)
+                {
+                    newIndex = i;
+                    break;
+                }
+            }
             if(type == 0)
             {
-                if(locType == 0) return cityUIPoses[index];
-                else return cityUIRots[index];
+                if(locType == 0) return cityUIPoses[newIndex];
+                else return cityUIRots[newIndex];
             }
             else
             {
-                if (locType == 0) return cityGamePoses[index];
-                else return cityGameRots[index];
+                if (locType == 0) return cityGamePoses[newIndex];
+                else return cityGameRots[newIndex];
             }
         }
 

@@ -10,6 +10,8 @@ namespace Monopoly.GameBoard
     public class TokenBoardObject : MonoBehaviour
     {
         public PhotonView photonView;
+        public bool isInJail;
+        public int remainJailTurns;
 
         private void Start()
         {
@@ -26,7 +28,7 @@ namespace Monopoly.GameBoard
         [PunRPC]
         public void MoveTokenRPCAll(Vector3 dest)
         {
-            transform.DOMove(dest, 1f);
+            transform.DOMove(dest, 2f);
         }
 
     }
