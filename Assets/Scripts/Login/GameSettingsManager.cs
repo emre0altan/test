@@ -15,6 +15,7 @@ namespace Monopoly.Login
         public InputField editCityName, editCityPrice;
         public CityUI firstSelected, secondSelected;
         public Slider initMoneySlider, mortgageRatioSlider;
+        public Text initMoneyText, mortgageRatioText;
 
         public float lastPinchDelta = 0, initSize = 0, currentSize = 0;
 
@@ -28,6 +29,7 @@ namespace Monopoly.Login
                 return;
             }
             Instance = this;
+
         }
 
         private void Start()
@@ -41,8 +43,10 @@ namespace Monopoly.Login
                 cityPoses[i] = tmpTraa.position;
                 cityRots[i] = tmpTraa.eulerAngles;
             }
-            PlayerPrefs.SetInt("InitMoney", 5000);
-            PlayerPrefs.SetInt("MortgageRatio", 20);
+            if (!PlayerPrefs.HasKey("InitMoney"))
+            {
+                GameDifficulty(1);
+            }
         }
 
 
@@ -173,11 +177,35 @@ namespace Monopoly.Login
         public void UpdateInitMoney()
         {
             PlayerPrefs.SetInt("InitMoney", Mathf.FloorToInt(initMoneySlider.value * 10000));
+            initMoneyText.text = Mathf.FloorToInt(initMoneySlider.value * 10000).ToString();
         }
 
         public void UpdateMortgage()
         {
             PlayerPrefs.SetInt("MortgageRatio", Mathf.FloorToInt(mortgageRatioSlider.value * 100));
+            mortgageRatioText.text = "%" + Mathf.FloorToInt(mortgageRatioSlider.value * 100).ToString();
+        }
+
+        public void GameDifficulty(int x)
+        {
+            if(x == 0)
+            {
+                PlayerPrefs.SetInt("InitMoney", 1000);
+                PlayerPrefs.SetInt("MortgageRatio", 70);
+                PlayerPrefs.SetInt("GoMoney", 300);
+            }
+            else if (x == 1)
+            {
+                PlayerPrefs.SetInt("InitMoney", 1500);
+                PlayerPrefs.SetInt("MortgageRatio", 50);
+                PlayerPrefs.SetInt("GoMoney", 200);
+            }
+            else if (x == 2)
+            {
+                PlayerPrefs.SetInt("InitMoney", 2000);
+                PlayerPrefs.SetInt("MortgageRatio", 30);
+                PlayerPrefs.SetInt("GoMoney", 100);
+            }
         }
     }
 }

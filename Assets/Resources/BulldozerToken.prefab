@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: -1785772465560272189}
+  isInJail: 0
+  remainJailTurns: 0
 --- !u!114 &-1785772465560272189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,8 +96,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890669180855022328}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.33454698, y: 0.33454698, z: 0.33454698}
+  m_LocalPosition: {x: 0, y: 0.021, z: 0}
+  m_LocalScale: {x: 0.42182893, y: 0.42182893, z: 0.42182893}
   m_Children: []
   m_Father: {fileID: 3495444698975387522}
   m_RootOrder: 0

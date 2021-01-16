@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - ChanceCard
+  - CommCard
   layers:
   - Default
   - TransparentFX

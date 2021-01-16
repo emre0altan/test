@@ -26,7 +26,7 @@ public class TouchManager : MonoBehaviour
 {
     public static TouchManager Instance;
 
-    private TouchInput _touch;
+    public TouchInput _touch;
 
     public bool isActive = true;
 

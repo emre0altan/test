@@ -12,6 +12,7 @@ namespace Monopoly.Login
         public Text cityName, cityPrice;
         public int cityLocation;
         public Image cityUpImage;
+        public bool isEditing = false;
 
         private bool selected;
         private RectTransform rectTransform;
@@ -26,9 +27,12 @@ namespace Monopoly.Login
 
         private void OnEnable()
         {
-            rectTransform = GetComponent<RectTransform>();
-            rectTransform.anchoredPosition = BoardManager.Instance.GetLocInfo(0, 0, cityLocation);
-            rectTransform.eulerAngles = BoardManager.Instance.GetLocInfo(0, 1, cityLocation);
+            if (!isEditing)
+            {
+                rectTransform = GetComponent<RectTransform>();
+                rectTransform.anchoredPosition = BoardManager.Instance.GetLocInfo(0, 0, cityLocation);
+                rectTransform.eulerAngles = BoardManager.Instance.GetLocInfo(0, 1, cityLocation);
+            }
         }
 
         public void SelectCity()

@@ -15,6 +15,8 @@ namespace Monopoly.GameBoard
 
         public TextMeshPro cityNameTMP, cityPriceTMP; 
         public PhotonView photonView;
+        public bool isFullColor;
+        public int propCount;
 
 
         public void UpdatePreSettings(string newname, int newprice, int newlocation)
@@ -27,11 +29,16 @@ namespace Monopoly.GameBoard
         {
             cityNameTMP.text = newname;
             cityPriceTMP.text = "$" + newprice.ToString();
+            Debug.Log(newlocation + " - " + newname);
             transform.localPosition = BoardManager.Instance.GetLocInfo(1, 0, newlocation);
             transform.localEulerAngles = BoardManager.Instance.GetLocInfo(1, 1, newlocation);
+
             cityName = newname;
             price = newprice;
             location = newlocation;
+            rent = newprice/ 10 + (newprice * currentHouseCount) / 10;
+            priceOfHouse = newprice / 2;
+            GetComponent<Cell>().location = newlocation;
         }
 
         [PunRPC]

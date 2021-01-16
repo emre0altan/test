@@ -106,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 3498215936484583964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3041, y: 1.3041, z: 1.3041}
   m_Children:
   - {fileID: 2675585467638600655}
   m_Father: {fileID: 0}
@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: -6494486113026057250}
+  isInJail: 0
+  remainJailTurns: 0
 --- !u!114 &-6494486113026057250
 MonoBehaviour:
   m_ObjectHideFlags: 0

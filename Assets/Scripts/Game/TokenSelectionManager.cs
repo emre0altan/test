@@ -54,10 +54,10 @@ namespace Monopoly.Game
                 }
                 for (int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
                 {
-                    int qq = Random.Range(0, PhotonNetwork.PlayerList.Length - 1 - i);
-                    playerTurns.Add(randlist[qq], PhotonNetwork.PlayerList[i].NickName);
-                    randlist.RemoveAt(qq);
+                    playerTurns.Add(i, PhotonNetwork.PlayerList[i].NickName);
+
                     playOrder[i].RPC("ShowOrder", RpcTarget.All, i, playerTurns[i]);
+                    
                 }
                 GameManager.Instance.playerTurns = playerTurns;
                 NextTurn();
@@ -136,6 +136,16 @@ namespace Monopoly.Game
 
         public void SelectToken()
         {
+            bool isthereglow = false;
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                if (tokens[i].glow.activeSelf)
+                {
+                    isthereglow = true;
+                }
+            }
+            if (!isthereglow) return;
+
             for (int i = 0; i < tokens.Length; i++)
             {
                 if (tokens[i].glow.activeSelf)

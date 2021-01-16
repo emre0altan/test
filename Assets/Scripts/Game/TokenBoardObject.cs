@@ -18,17 +18,18 @@ namespace Monopoly.GameBoard
             transform.SetParent(GameManager.Instance.transform);
         }
 
-        public void MoveToken(Vector3 dest)
+        public void MoveToken(Vector3 dest, bool inJail, int remained)
         {
-            photonView.RPC("MoveTokenRPCAll", RpcTarget.All, dest);
-            Debug.Log("TOKEN MOVING TO " + dest);
+            photonView.RPC("MoveTokenRPCAll", RpcTarget.All, dest, inJail, remained);
         }
 
 
         [PunRPC]
-        public void MoveTokenRPCAll(Vector3 dest)
+        public void MoveTokenRPCAll(Vector3 dest, bool inJail, int remained)
         {
             transform.DOMove(dest, 2f);
+            isInJail = inJail;
+            remainJailTurns = remained;
         }
 
     }

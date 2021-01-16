@@ -35,6 +35,7 @@ namespace Monopoly.Login
             if (loginCanvas.activeSelf)
             {
                 loadingPanel.SetActive(false);
+                LobbyManager.Instance.ConnectToChat();
                 Debug.Log("On connected to master called");
             }
         }
@@ -47,6 +48,7 @@ namespace Monopoly.Login
                 PhotonNetwork.LocalPlayer.NickName = userNameField.text;
                 loadingPanel.SetActive(true);
                 PhotonNetwork.JoinLobby();
+                LobbyManager.Instance.SubscribeToChat();
             }
         }
 

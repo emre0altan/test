@@ -28,6 +28,6 @@ namespace Monopoly.Login
         public void CheckMyReady()
         {
             check.SetActive(!check.activeSelf);
-        }
+        }        
     }
 }

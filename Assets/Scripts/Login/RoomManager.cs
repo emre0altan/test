@@ -6,6 +6,7 @@ using Monopoly.GameBoard;
 using Monopoly.Game;
 using Photon.Pun;
 using Photon.Realtime;
+using ExitGames.Client.Photon;
 
 namespace Monopoly.Login
 {
@@ -13,9 +14,9 @@ namespace Monopoly.Login
     {
         public static RoomManager Instance;
 
-        public UserInfoRoom userInfoRoomPrefab;
+        public UserInfoRoom userInfoRoomPrefab, myUserInfo;
         public Transform userInfoGrid;
-        public GameObject loadingPanel, roomCanvas, gameSettingsCanvas, gameCanvas, lobbyCanvas, gameSettingsButton, startGameButton, tokenSelectCanvas;
+        public GameObject loadingPanel, roomCanvas, gameSettingsCanvas, gameCanvas, lobbyCanvas, gameSettingsButton, startGameButton, inviteAllButton, tokenSelectCanvas;
         public Text roomName;
         public Button startButton;
 
@@ -51,17 +52,19 @@ namespace Monopoly.Login
 
         public void EnteredRoom()
         {
-            UserInfoRoom tmpUserInfo = PhotonNetwork.Instantiate("UserInfo", Vector3.zero, Quaternion.identity).GetComponent<UserInfoRoom>();
+            myUserInfo = PhotonNetwork.Instantiate("UserInfo", Vector3.zero, Quaternion.identity).GetComponent<UserInfoRoom>();
             roomName.text = "Room - " + PhotonNetwork.CurrentRoom.Name;
             if (PhotonNetwork.IsMasterClient)
             {
                 gameSettingsButton.SetActive(true);
                 startGameButton.SetActive(true);
+                inviteAllButton.SetActive(true);
             }
             else
             {
                 gameSettingsButton.SetActive(false);
                 startGameButton.SetActive(false);
+                inviteAllButton.SetActive(false);
             }
         }
 
@@ -72,11 +75,13 @@ namespace Monopoly.Login
             {
                 gameSettingsButton.SetActive(true);
                 startGameButton.SetActive(true);
+                inviteAllButton.SetActive(true);
             }
             else
             {
                 gameSettingsButton.SetActive(false);
                 startGameButton.SetActive(false);
+                inviteAllButton.SetActive(false);
             }
         }
 
@@ -124,8 +129,8 @@ namespace Monopoly.Login
         {
             if (PhotonNetwork.IsMasterClient)
             {
-                BoardManager.Instance.PublishBoardChanges();
                 TokenSelectionManager.Instance.GotoTokenScreen();
+                BoardManager.Instance.PublishBoardChanges();
             }
         }
     }

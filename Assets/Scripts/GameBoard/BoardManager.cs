@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Monopoly.Login;
 using Photon.Pun;
+using Monopoly.Game;
 
 namespace Monopoly.GameBoard
 {
@@ -81,17 +82,17 @@ namespace Monopoly.GameBoard
         public Vector3 GetLocInfo(int type, int locType, int index)
         {
             int newIndex = 0;
-            for(int i = 0; i < settingsCityUIs.Length; i++)
+            for (int i = 0; i < settingsCityUIs.Length; i++)
             {
-                if(settingsCityUIs[i].cityLocation == index)
+                if (settingsCityUIs[i].cityLocation < index)
                 {
-                    newIndex = i;
-                    break;
+                    newIndex++;
                 }
             }
-            if(type == 0)
+
+            if (type == 0)
             {
-                if(locType == 0) return cityUIPoses[newIndex];
+                if (locType == 0) return cityUIPoses[newIndex];
                 else return cityUIRots[newIndex];
             }
             else
@@ -142,9 +143,19 @@ namespace Monopoly.GameBoard
 
         public void PublishBoardChanges()
         {
-            for(int i = 0; i < 22; i++)
+            int k = 0;
+            Cell[] cells = GameManager.Instance.boardCells;
+            for(int i = 0; i < cells.Length; i++)
             {
-                inGameCities[i].UpdatePreSettings(currentCityInfos[i].cityName, currentCityInfos[i].cityPrice, currentCityInfos[i].location);
+                if(k < 22)
+                {
+                    if (cells[i].gameObject.name == inGameCities[k].gameObject.name)
+                    {
+                        inGameCities[k].UpdatePreSettings(currentCityInfos[k].cityName, currentCityInfos[k].cityPrice, currentCityInfos[k].location);
+
+                        k++;
+                    }
+                }
             }
         }
     }
