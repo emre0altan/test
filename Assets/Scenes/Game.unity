@@ -14914,7 +14914,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15005,7 +15005,7 @@ MonoBehaviour:
   cityName: WATER WORKS
   owner: 
   price: 150
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0
@@ -16024,7 +16024,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18321,7 +18321,7 @@ MonoBehaviour:
   cityName: PENNSYLVANIA  RAILROAD
   owner: 
   price: 200
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0
@@ -27413,7 +27413,7 @@ MonoBehaviour:
   cityName: SHORT LINE
   owner: 
   price: 200
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0
@@ -33161,7 +33161,7 @@ MonoBehaviour:
   cityName: ELECTRIC COMPANY
   owner: 
   price: 150
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0
@@ -35486,7 +35486,7 @@ MonoBehaviour:
   cityName: B. & O.  RAILROAD
   owner: 
   price: 200
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0
@@ -36461,7 +36461,7 @@ MonoBehaviour:
   cityName: READING  RAILROAD
   owner: 
   price: 200
-  rent: 0
+  rent: 50
   currentHouseCount: 0
   priceOfHouse: 0
   location: 0

@@ -260,7 +260,7 @@ namespace Monopoly.Game
                 {
                     if (playerNames[k].playerName == currentPlayerName)
                     {
-                        playerMoneys[currentPlayerName] += currCard.moneyChange;
+                        playerMoneys[currentPlayerName] += currCard.moneyChange * 3;
                         playerNames[k].UpdatePlayerNames(currentPlayerName, playerMoneys[currentPlayerName]);
                     }
                     else if(k < transform.childCount)

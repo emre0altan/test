@@ -190,7 +190,7 @@ namespace Monopoly.Login
         {
             if(x == 0)
             {
-                PlayerPrefs.SetInt("InitMoney", 1000);
+                PlayerPrefs.SetInt("InitMoney", 2000);
                 PlayerPrefs.SetInt("MortgageRatio", 70);
                 PlayerPrefs.SetInt("GoMoney", 300);
             }
@@ -202,7 +202,7 @@ namespace Monopoly.Login
             }
             else if (x == 2)
             {
-                PlayerPrefs.SetInt("InitMoney", 2000);
+                PlayerPrefs.SetInt("InitMoney", 1000);
                 PlayerPrefs.SetInt("MortgageRatio", 30);
                 PlayerPrefs.SetInt("GoMoney", 100);
             }
